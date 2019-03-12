@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tetris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="tetris-body">
+            <div class="game-screen">
+                <div id="main-screen">
+                    <div data-y='15' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='14' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='13' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='12' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='11' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='10' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='9' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='8' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='7' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='6' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='5' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='4' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='3' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='2' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                    <div data-y='1' class='row'>
+                        <div class='block' data-x="1"></div><div class='block' data-x="2"></div><div class='block' data-x="3"></div><div class='block' data-x="4"></div><div class='block' data-x="5"></div>
+                        <div class='block' data-x="6"></div><div class='block' data-x="7"></div><div class='block' data-x="8"></div><div class='block' data-x="9"></div><div class='block' data-x="10"></div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="next-figure-wrapper">
+                        <p>Next</p>
+                        <div class='next-figure'>
+
+                        </div>
+                    </div>
+                    <div class="holded-figure-wrapper">
+                        <p>Hold</p>
+                        <div class='holded-figure'>
+
+                        </div>
+                    </div>
+                    <div class="score">
+                        <p>Score</p>
+                        <p>000000000</p>
+                    </div>
+                    <div class="level">
+                        <p>Level</p>
+                        <p>1</p>
+                    </div>
+                    <p id='copyright'>© LionKing10</p>
+                </div>
+            </div>
+            <div class='control-buttons'>
+                <button type="button" id="enter">Enter</button>
+                <div class="rotate-button">
+                    <button type="button" id="rotate"></button>
+                </div>
+                <div class="move-figures-buttons">
+                    <div>
+                    <button type="button" id="hold"></button>
+                    </div>
+                    <div>
+                    <button type="button" id="left"></button>
+                    <button type="button" id="right"></button>
+                    </div>
+                    <div>
+                    <button type="button" id="down"></button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <script src='scripts/jquery-3.3.1.js'></script>
+        <script src="scripts/controls.js"></script>
+        <script src='scripts/figures-creation.js'></script>
+        <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

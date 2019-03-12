@@ -1,0 +1,132 @@
+body {
+  background-image: url(../../img/background-piece.png); }
+
+.tetris-body {
+  overflow: auto;
+  width: 650px;
+  height: 850px;
+  background-color: #71c496;
+  margin: 42px auto;
+  border-radius: 10px; }
+
+.game-screen {
+  margin-top: 42px;
+  margin-left: 74px;
+  display: flex; }
+
+#main-screen {
+  width: 370px;
+  height: 582px;
+  background-color: #b2e0e0;
+  border-radius: 10px 0px 0px 10px; }
+
+.sidebar {
+  width: 132px;
+  height: 582px;
+  background-color: #3da8e2;
+  border-radius: 0px 10px 10px 0px; }
+
+.next-figure-wrapper, .holded-figure-wrapper {
+  margin: 31px auto 0px;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px; }
+
+.next-figure, .holded-figure {
+  width: 71px;
+  height: 71px;
+  background-color: #bde4d3;
+  border: 3px black solid;
+  border-radius: 10px;
+  margin: 14px auto 0px; }
+
+.score, .level {
+  margin-top: 31px;
+  color: white;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 1px; }
+
+#copyright {
+  color: white;
+  margin-top: 90px;
+  text-align: center; }
+
+.control-buttons {
+  margin-top: 30px;
+  margin-left: 74px;
+  margin-right: 74px;
+  display: flex;
+  justify-content: space-between; }
+
+.rotate-button {
+  width: 150px;
+  height: 150px;
+  background-color: #a10707;
+  border-radius: 50%;
+  position: relative;
+  top: 11px; }
+
+#rotate {
+  width: 129px;
+  height: 129px;
+  background-color: #d11616;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  margin: 11px 11px; }
+
+#rotate:hover {
+  background-color: #d11616;
+  box-shadow: inset 0px 0px 20px 1px rgba(0, 0, 0, 0.65); }
+
+#rotate:active {
+  background-color: #d11616;
+  box-shadow: inset 0px 0px 36px 2px rgba(0, 0, 0, 0.65); }
+
+#rotate:focus {
+  outline: none; }
+
+#enter {
+  position: absolute;
+  width: 114px;
+  height: 29px;
+  background-color: #dada03;
+  color: #c20d0d;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 182px; }
+
+#enter:focus {
+  outline: none; }
+
+.move-figures-buttons button {
+  background-color: #224cbe;
+  border-radius: 10px; }
+.move-figures-buttons button:focus {
+  outline: none; }
+.move-figures-buttons #hold, .move-figures-buttons #down {
+  width: 28px;
+  height: 74px;
+  position: relative;
+  left: 70px; }
+.move-figures-buttons #right, .move-figures-buttons #left {
+  width: 74px;
+  height: 28px; }
+.move-figures-buttons #left {
+  margin-right: 15px; }
+
+.row {
+  width: 370px;
+  height: 37px;
+  display: flex; }
+
+.row[data-y='15'] {
+  margin-top: 25px; }
+
+.block {
+  width: 37px;
+  height: 37px; }
+
+/*# sourceMappingURL=style.css.map */
