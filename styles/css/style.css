@@ -127,6 +127,7 @@ body {
 
 .block {
   width: 37px;
-  height: 37px; }
+  height: 37px;
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,34 +5,41 @@ function FigureTemplate() {
 }
 
 FigureTemplate.prototype.randomFigure = function () {
-    this.rand = Math.round(Math.random() * (8 - 1) + 1);
+    this.rand = Math.round(Math.random() * (7 - 1) + 1);
     switch (this.rand) {
         case 1:
             this.figure = 'square';
+            this.color = 'yellow';
             this.possiblePositions = "11|11";
             break;
         case 2:
             this.figure = 'line';
-            this.possiblePositions = '1111:01|01|01|01';
+            this.color = 'rgb(34, 158, 230)';
+            this.possiblePositions = '1111:1|1|1|1';
             break;
         case 3:
             this.figure = 'greenZigzag';
-            this.possiblePositions = '011|110:010|011|001';
+            this.color = 'rgb(37, 179, 37)'
+            this.possiblePositions = '011|110:10|11|01';
             break;
         case 4:
             this.figure = 'redZigzag';
-            this.possiblePositions = '110|011:010|110|100';
+            this.color = 'rgb(221, 22, 22)'
+            this.possiblePositions = '110|011:01|11|10';
             break;
         case 5:
             this.figure = 'leftGun';
+            this.color = 'rgb(30, 30, 240)';
             this.possiblePositions = '111|001:01|01|11:100|111:11|10|10';
             break;
         case 6:
             this.figure = 'rightGun';
+            this.color = 'orange';
             this.possiblePositions = '111|100:10|10|11:001|111:11|01|01';
             break;
         case 7:
             this.figure = 'pyramid';
+            this.color = 'rgb(160, 31, 185)'
             this.possiblePositions = '111|010:10|11|10:010|111:01|11|01';
             break;
     }
@@ -45,7 +52,6 @@ FigureTemplate.prototype.rotate = function () {
         this.positionCount = 0;
     }
     this.currentPosition = this.arrayOfPositions[this.positionCount];
-    console.log('Rotated to ' + this.currentPosition);
 }
 
 FigureTemplate.prototype.addDiv = function(div){
@@ -56,6 +62,13 @@ FigureTemplate.prototype.clearArr = function(){
     this.arrOfDivs = [];
 }
 
-// a = figure.currentPosition.split('|').map(function(b){         // Figure's height
-//     return b; 
+// var $select = $("select");
+// var $div = $("div");
+
+// var attributes = $select.prop("attributes");
+
+// $.each(attributes, function() {
+//     $div.attr(this.name, this.value);
 // });
+
+// alert($div.data("foo"));
