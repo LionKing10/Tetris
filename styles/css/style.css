@@ -30,15 +30,19 @@ body {
   margin: 31px auto 0px;
   color: white;
   text-align: center;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  position: relative; }
 
-.next-figure, .holded-figure {
+#next-figure, #holded-figure {
   width: 71px;
   height: 71px;
   background-color: #bde4d3;
   border: 3px black solid;
   border-radius: 10px;
   margin: 14px auto 0px; }
+
+#next-figure img, #holded-figure img {
+  vertical-align: middle; }
 
 .score, .level {
   margin-top: 31px;
@@ -129,5 +133,10 @@ body {
   width: 37px;
   height: 37px;
   box-sizing: border-box; }
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=style.css.map */

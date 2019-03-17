@@ -61,14 +61,3 @@ FigureTemplate.prototype.addDiv = function(div){
 FigureTemplate.prototype.clearArr = function(){
     this.arrOfDivs = [];
 }
-
-// var $select = $("select");
-// var $div = $("div");
-
-// var attributes = $select.prop("attributes");
-
-// $.each(attributes, function() {
-//     $div.attr(this.name, this.value);
-// });
-
-// alert($div.data("foo"));

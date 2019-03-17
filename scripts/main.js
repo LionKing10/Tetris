@@ -1,51 +1,7 @@
-function setContainProperty() {
-    var blocks = $('[data-x]');
-    newArr = [];
-    for (var i = 0; i < blocks.length; i++) {
-        newArr.push(blocks[i]);
-    }
-    newArr.forEach(function (el) {
-        el.setAttribute('contains', 'false');
-    });
-}
-setContainProperty();
-
-function setFillProperty(){
-    var rows = $('[data-y]');
-    newArr = [];
-    for (var i = 0; i < rows.length; i++) {
-        newArr.push(rows[i]);
-    }
-    newArr.forEach(function (el) {
-        el.setAttribute('fill', 0);
-    });
-}
-setFillProperty();
-
-function currentFigure() {
-    var currentFigure = new FigureTemplate();
-    currentFigure.randomFigure();
-    return currentFigure;
-}
-
-function nextFigure() {
-    var nextFigure = new FigureTemplate();
-    nextFigure.randomFigure();
-    return nextFigure;
-}
-
-var cFigure = currentFigure();
-var nFigure = nextFigure();
-var mainScreenSelector = $('#main-screen').children();
-var mainScreen = [];
-for(var i = 0; i < mainScreenSelector.length; i++){
-    mainScreen.push(mainScreenSelector[i]);
-}
-
 function moveFigure(figure, rowCount, count) {
     currentRow = 14 - rowCount;
     var count = count || 5;
-    if (currentRow === 1){
+    if (currentRow === 1) {
         if (checkContains(figure, currentRow, count)) {
             buildFigure(figure, currentRow, count);
         }
@@ -53,15 +9,15 @@ function moveFigure(figure, rowCount, count) {
         figure = nFigure;
         nFigure = nextFigure();
         moveFigure(figure, 0);
-    }       
-    else{
+    }
+    else {
         if (checkContains(figure, currentRow, count)) {
             buildFigure(figure, currentRow, count);
             var timerId = setTimeout(moveFigure, 1000, figure, ++rowCount, count);
             document.onkeydown = checkKey(figure, rowCount, count, timerId);
         }
-        else{
-            if (currentRow === 14){
+        else {
+            if (currentRow === 14) {
                 alert('Game over')
                 return;
             }
@@ -93,11 +49,11 @@ function checkContains(figure, currentRow, count) {
             }
         }
     }
-    if (nextDivs.some(function(el){ return el == undefined})){
+    if (nextDivs.some(function (el) { return el == undefined })) {
         return true;
     }
     return nextDivs.every(function (el) {
-        return ($($(el)).attr('contains')) == 'false' ;
+        return ($($(el)).attr('contains')) == 'false';
     })
 }
 
@@ -130,9 +86,9 @@ function clearDiv(figure) {
     figure.clearArr();
 }
 
-function clearRow(row){
+function clearRow(row) {
     arr = [];
-    for (var i = 0; i < row.children.length; i++){
+    for (var i = 0; i < row.children.length; i++) {
         arr.push(row.children[i])
     }
     $(row).attr('fill', 0);
@@ -147,10 +103,10 @@ function checkFill(figure) {
         var currentFill = Number($(parent).attr('fill'));
         $(parent).attr('fill', currentFill + 1);
     })
-    mainScreen.forEach(function(el){
+    mainScreen.forEach(function (el) {
         if ($(el).attr('fill') >= 10) {
             var rowPosition = mainScreen.indexOf(el);
-            for (var i = rowPosition; i > 1; i--){
+            for (var i = rowPosition; i > 1; i--) {
                 var tempFill = $($(mainScreen[i - 1])[0]).attr('fill');
                 $($(mainScreen[i])[0]).attr('fill', tempFill);
                 $($(mainScreen[i])[0]).html($($(mainScreen[i - 1])[0]).html());
