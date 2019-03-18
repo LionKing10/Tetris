@@ -86,17 +86,6 @@ function clearDiv(figure) {
     figure.clearArr();
 }
 
-function clearRow(row) {
-    arr = [];
-    for (var i = 0; i < row.children.length; i++) {
-        arr.push(row.children[i])
-    }
-    $(row).attr('fill', 0);
-    arr.forEach(function (el) {
-        $(el).css({ "background-color": "transparent", "border": "none" }).attr('contains', 'false').attr('fill', 0);
-    });
-}
-
 function checkFill(figure) {
     figure.arrOfDivs.forEach(function (el) {
         parent = $(el).parent()[0]
@@ -110,7 +99,6 @@ function checkFill(figure) {
                 var tempFill = $($(mainScreen[i - 1])[0]).attr('fill');
                 $($(mainScreen[i])[0]).attr('fill', tempFill);
                 $($(mainScreen[i])[0]).html($($(mainScreen[i - 1])[0]).html());
-                console.log('sex')
             }
         }
     })
